@@ -520,6 +520,9 @@
         16: Load2断路: Load2_open circuit;     
         17: Load3断路: Load3_open circuit;     
       </p>
+      <p>
+        注：我们的故障类型不包括BAT短路、Load短路类型的原因说明如下：我们除了板载电池，还外接了一组电池，希望通过这种方法模拟BAT短路的情况，但是实验证明，这种做法是危险的，有较大安全隐患。而且观察显示，这种突发短路故障，会立刻触发电源系统的短路保护，其实验现象会与断路实验相似。因此我们认为即使无法进行这几项实验，该数据集也能够充分评估故障诊断方法的有效性。
+      </p>
       <br>
       <p>
         Visualization example of SA_partial component or branch short circuit:

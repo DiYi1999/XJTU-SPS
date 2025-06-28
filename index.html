@@ -70,7 +70,8 @@
 
                   <div class="is-size-5 publication-authors">
                     <span class="author-block">National Key Lab of Aerospace Power System and Plasma Technology, Xi'an Jiaotong University, P.R. China</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>welcome any communication and discussion: dy1999@stu.xjtu.edu.cn (Yi Di), zhaozhibin@xjtu.edu.cn (Zhibin Zhao), zhaizhi@xjtu.edu.cn (Zhi Zhai)</small></span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>welcome any discussion: dy1999@stu.xjtu.edu.cn (Yi Di), zhaozhibin@xjtu.edu.cn (Zhibin Zhao), zhaizhi@xjtu.edu.cn (Zhi Zhai), chenxf@xjtu.edu.cn (Xuefeng Chen)</small></span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>welcome any communication and discussion: dy1999@stu.xjtu.edu.cn (Yi Di), zhaozhibin@xjtu.edu.cn (Zhibin Zhao), zhaizhi@xjtu.edu.cn (Zhi Zhai)</small></span> -->
                   </div>
                   <!-- , chenxf@xjtu.edu.cn (Xuefeng Chen) -->
 
@@ -78,7 +79,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://huggingface.co/datasets/DiYi1999/XJTU-SPS" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fab fa-github"></i>
@@ -100,16 +101,16 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/DiYi1999/SPS-Model-and-PIGNNP" target="_blank"
+                    <a href="https://github.com/DiYi1999/PhyGNN" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
-                    <span>Digital twin model</span>
+                    <span>Physical Simulation</span>
                   </a>
                 </span>
               
-                <!-- 插入 JavaScript 代码用于获取收藏数 -->
+                <!-- 插入 JavaScript 代码用于获取收藏数
                 <script>
                   async function fetchGitHubStars() {
                     const response = await fetch('https://api.github.com/repos/DiYi1999/ISTGAD');
@@ -128,16 +129,27 @@
                       </span>
                       <span id="github-stars">Star</span>
                       </a>
+                    </span> -->
+
+                  <!-- ArXiv PDF link -->
+                  <span class="link-block">
+                    <a href="https://huggingface.co/datasets/DiYi1999/XJTU-SPS"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
                     </span>
+                    <span>Cloud Drive</span>
+                  </a>
+                </span>
 
               <!-- ArXiv abstract Link -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                <a href="https://github.com/DiYi1999/XJTU-SPS/blob/main/static/pdfs/中文介绍.pdf" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                   <i class="fas fa-face-smiling-hands"></i>
                 </span>
-                <span>Hugging Face</span>
+                <span>中文版介绍</span>
               </a>
             </span>
             
@@ -174,19 +186,32 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            由于航天领域严格的保密政策，开源的航天器观测数据非常有限。但是基于航天任务的耗资甚巨和各国星网的建设繁荣现状，相关航天设备的运维技术发展是刻不容缓的，遂公开XJTU-SPS相关资料以期对该领域的研究有所帮助。XJTU-SPS面向的研究对象是航天器电源系统，原因在于该系统是航天器故障最为频发、后果最为严重的子系统之一。
+            Stringent confidentiality policies in aerospace domains severely limit accessible spacecraft observation data. 
+            However, given the substantial costs of space missions and the proliferation of global satellite constellations, advancing operational maintenance technologies for aerospace equipment is imperative. 
+            Consequently, we publicly release the XJTU-SPS dataset to facilitate research in this field.            
+            <!-- 由于航天领域严格的保密政策，开源的航天器观测数据非常有限。但是基于航天任务的耗资甚巨和各国星网的建设繁荣现状，相关航天设备的运维技术发展是刻不容缓的，遂公开XJTU-SPS相关资料希望能够对该领域的研究有所帮助。 -->
           </p>
           <p>
-            同时航天器电源系统作为典型的复杂工业传感器网络系统，其物理耦合是复杂的、工况是恶劣的、工作模式是多样的，对该系统相关数据的处理和分析方法有希望被推广到其他电源系统，如地面家庭光伏用电系统、电动汽车电源系统等。
+            XJTU-SPS targets spacecraft power system (SPS), one of the most failure-prone and critically consequential subsystems in spacecraft.
+            <!-- XJTU-SPS面向的研究对象是航天器电源系统，原因在于该系统是航天器故障最为频发、后果最为严重的子系统之一。 -->
           </p>
           <p>
-            具体来讲，XJTU-SPS包括四个子数据集：XJTU-SPS for Forecasting or Reconstruction (XJTU-SPS for F or R), XJTU-SPS for work Mode Recognition (XJTU-SPS for MR), XJTU-SPS for Anomaly Detection (XJTU-SPS for AD), XJTU-SPS for Fault Diagnosis (XJTU-SPS for FD)。
+            As a representative complex industrial system with multi-sensor network, spacecraft power systems exhibit intricate physical couplings and diverse operational regimes. 
+            This dataset can be utilized in other domains for validating algorithm generalizability.
+            <!-- 同时航天器电源系统作为典型的复杂工业传感器网络系统，其物理耦合是复杂的、工作模式是多样的，对本数据集的利用有希望被推广到其他领域，用于验证研究者所开发算法的泛用性。 -->
           </p>
           <p>
-            同时，XJTU-SPS还配套有对应的数学物理模型，能够提供和实验完全对应的物理仿真，因此对PINN (Physics-Informed Neural Network)、数字孪生、模型预测控制等领域的研究也可以有所帮助。
+            Specifically, XJTU-SPS consists of four sub-datasets: (1) XJTU-SPS for Forecasting or Reconstruction (XJTU-SPS for F or R),
+            (2) XJTU-SPS for work Mode Recognition (XJTU-SPS for MR), (3) XJTU-SPS for Anomaly Detection (XJTU-SPS for AD), and (4) XJTU-SPS for Fault Diagnosis (XJTU-SPS for FD).
+            <!-- 具体来讲，XJTU-SPS包括四个子数据集：XJTU-SPS for Forecasting or Reconstruction (XJTU-SPS for F or R), XJTU-SPS for work Mode Recognition (XJTU-SPS for MR), XJTU-SPS for Anomaly Detection (XJTU-SPS for AD), XJTU-SPS for Fault Diagnosis (XJTU-SPS for FD)。 -->
           </p>
           <p>
-            关键词：航天器、电源系统、PINN、数字孪生、监测及运行维护、时间序列预测、时间序列重建、工作模式识别、异常检测、故障诊断。
+            Meanwhile, XJTU-SPS is supplemented with fully aligned mathematical-physical models enabling simulations and physical knowledge provision, thereby we also anticipate that XJTU-SPS can provide some support to researchers in Physics-Informed Neural Networks (PINNs), digital twins, and predictive control.
+            <!-- 同时，XJTU-SPS还配套有对应的数学物理模型，能够提供和实验完全对应的物理仿真，因此也希望对PINN (Physics-Informed Neural Network)、数字孪生、模型预测控制等领域的研究有所帮助。 -->
+          </p>
+          <p>
+            Keywords: spacecraft, power system, PINN, digital twin, monitoring and operation maintenance, time series forecasting, time series reconstruction, work mode recognition, anomaly detection, fault diagnosis.
+            <!-- 关键词：航天器、电源系统、PINN、数字孪生、监测及运行维护、时间序列预测、时间序列重建、工作模式识别、异常检测、故障诊断。 -->
           </p>        
         </div>
       </div>
@@ -215,28 +240,28 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            SPS由以下子系统组成：太阳能电池阵列（SA）、电池组（BAT）、电池充电调节器（BCR）、电池放电调节器（BDR）、分流调节器（SR）、电源分配模块（PDM）、负载（Loads）等。
-            SA是SPS的电源，负责将太阳辐射转换为电能，其输出功率受太阳辐射、温度、阴影等因素的影响。
-            BAT是SPS的电能存储单元，负责存储SA提供的电能。
-            BCR是SPS的充电控制单元，负责控制BAT的充电。
-            BDR是SPS的放电控制单元，负责控制BAT向Loads的放电。
-            SR是SPS的能量调节单元，它与BCR和BDR共同完成以下功能：
-            • 当位于阳光区域且阳光充足时，SA为BAT充电并向Loads供电；
-            • 当位于阳光区域且阳光不足时，SA和BAT共同向Loads供电；
-            • 当位于阴影区域时，SA不工作，BAT向Loads供电。
-            PDM是SPS的电能分配单元，负责将电能分配给各种Loads。
-            Loads是航天器电源系统的功耗单元，其功耗需求受航天器工作状态和任务需求等因素的影响。
-            <!-- The SPS comprises the following subsystems: solar array (SA), battery sets (BAT), battery charge regulator (BCR), battery discharge regulator (BDR), shunt regulator (SR), power distribution module (PDM), loads (Loads), and others.  -->
-            <!-- The SA is the power source of the SPS, responsible for converting solar radiation into electrical energy, and its output power is affected by factors such as solar radiation, temperature, and shadow.  -->
-            <!-- The BAT is the power storage unit of the SPS, responsible for storing the electrical energy provided by the SA. -->
-            <!-- The BCR is the charge control unit of the SPS, responsible for controlling the charging of the BAT.  -->
-            <!-- The BDR is the discharge control unit of the SPS, responsible for controlling the discharge of the BAT to the Loads.  -->
-            <!-- The SR is the energy regulation unit of the SPS, it works with the BCR and BDR to complete the following functions:  -->
-            <!-- • When located in the sunlight area and the sunlight is sufficient, the SA charges the BAT and supplies power to the Loads, -->
-            <!-- • When located in the sunlight area and the sunlight is insufficient, the SA and BAT jointly supply power to the Loads, -->
-            <!-- • When located in the shadow area, the SA does not work, and the BAT supplies power to the Loads. -->
-            <!-- The PDM is the power distribution unit of the SPS, responsible for distributing electrical energy to various Loads.  -->
-            <!-- The Loads are the power consumption unit of the spacecraft power system, and their power requirements are affected by factors such as the working state of the spacecraft and mission requirements. -->
+            <!-- SPS由以下子系统组成：太阳能电池阵列（SA）、电池组（BAT）、电池充电调节器（BCR）、电池放电调节器（BDR）、分流调节器（SR）、电源分配模块（PDM）、负载（Loads）等。 -->
+            <!-- SA是SPS的电源，负责将太阳辐射转换为电能，其输出功率受太阳辐射、温度、阴影等因素的影响。 -->
+            <!-- BAT是SPS的电能存储单元，负责存储SA提供的电能。 -->
+            <!-- BCR是SPS的充电控制单元，负责控制BAT的充电。 -->
+            <!-- BDR是SPS的放电控制单元，负责控制BAT向Loads的放电。 -->
+            <!-- SR是SPS的能量调节单元，它与BCR和BDR共同完成以下功能： -->
+            <!-- • 当位于阳光区域且阳光充足时，SA为BAT充电并向Loads供电； -->
+            <!-- • 当位于阳光区域且阳光不足时，SA和BAT共同向Loads供电； -->
+            <!-- • 当位于阴影区域时，SA不工作，BAT向Loads供电。 -->
+            <!-- PDM是SPS的电能分配单元，负责将电能分配给各种Loads。 -->
+            <!-- Loads是航天器电源系统的功耗单元，其功耗需求受航天器工作状态和任务需求等因素的影响。 -->
+            The SPS comprises the following subsystems: solar array (SA), battery sets (BAT), battery charge regulator (BCR), battery discharge regulator (BDR), shunt regulator (SR), power distribution module (PDM), loads (Loads), and others. 
+            The SA is the power source of the SPS, responsible for converting solar radiation into electrical energy, and its output power is affected by factors such as solar radiation, temperature, and shadow. 
+            The BAT is the power storage unit of the SPS, responsible for storing the electrical energy provided by the SA.
+            The BCR is the charge control unit of the SPS, responsible for controlling the charging of the BAT. 
+            The BDR is the discharge control unit of the SPS, responsible for controlling the discharge of the BAT to the Loads. 
+            The SR is the energy regulation unit of the SPS, it works with the BCR and BDR to complete the following functions: 
+            • When located in the sunlight area and the sunlight is sufficient, the SA charges the BAT and supplies power to the Loads,
+            • When located in the sunlight area and the sunlight is insufficient, the SA and BAT jointly supply power to the Loads,
+            • When located in the shadow area, the SA does not work, and the BAT supplies power to the Loads.
+            The PDM is the power distribution unit of the SPS, responsible for distributing electrical energy to various Loads. 
+            The Loads are the power consumption unit of the spacecraft power system, and their power requirements are affected by factors such as the working state of the spacecraft and mission requirements.
           </p>
         </div>
         </div>
@@ -267,9 +292,9 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            “charge”表示SA只为BAT充电，不为LOAD供电；“shunt”表示SA为LOAD和BAT提供能量；“joint”表示SA和BAT同时为LOAD提供能量；“leisure”表示没有负载，BAT也不在充电；“discharge”表示BAT只为LOAD供电。
-            我们模拟的航天器处于近地轨道（LEO）中，其周期为95分钟。在正常情况下，为了最大化发电量，该航天器处于朝阳模式。但是在执行诸如对地目标成像等任务时，需要切换到朝地模式。
-            <!-- `charge' means SA only charges BAT without any load, `shunt' means SA provides energy for both LOAD and BAT, `joint' means SA and BAT provide energy for LOAD simultaneously, `leisure' means there is no load and BAT is not charging, and `discharge' means BAT only supplies energy to LOAD. The spacecraft we simulated is in low Earth orbit (LEO), and its period is 95 minutes. Under normal circumstances, to maximize the energy generated, this spacecraft is in sun-oriented mode. However, when performing tasks such as imaging the ground targets, it is necessary to switch to ground-oriented mode. -->
+            <!-- “charge”表示SA只为BAT充电，不为LOAD供电；“shunt”表示SA为LOAD和BAT提供能量；“joint”表示SA和BAT同时为LOAD提供能量；“leisure”表示没有负载，BAT也不在充电；“discharge”表示BAT只为LOAD供电。 -->
+            <!-- 我们模拟的航天器处于近地轨道（LEO）中，其周期为95分钟。在正常情况下，为了最大化发电量，该航天器处于朝阳模式。但是在执行诸如对地目标成像等任务时，需要切换到朝地模式。 -->
+            `charge' means SA only charges BAT without any load, `shunt' means SA provides energy for both LOAD and BAT, `joint' means SA and BAT provide energy for LOAD simultaneously, `leisure' means there is no load and BAT is not charging, and `discharge' means BAT only supplies energy to LOAD. The spacecraft we simulated is in low Earth orbit (LEO), and its period is 95 minutes. Under normal circumstances, to maximize the energy generated, this spacecraft is in sun-oriented mode. However, when performing tasks such as imaging the ground targets, it is necessary to switch to ground-oriented mode.
           </p>
         </div>
         </div>
@@ -300,8 +325,8 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            我们并未测量所有的电池组，而只测量了第2、3、4组电池，事实上，其他两组电池的观测性质也是类似的。
-            <!-- We did not measure all battery groups, but only the 2nd, 3rd, and 4th groups of batteries, in fact, the other 2 groups of batteries exhibit similar observational properties. -->
+            <!-- 我们并未测量所有的电池组，而只测量了第2、3、4组电池，事实上，其他两组电池的观测性质也是类似的。 -->
+            We did not measure all battery groups, but only the 2nd, 3rd, and 4th groups of batteries, in fact, the other 2 groups of batteries exhibit similar observational properties.
           </p>
         </div>
         </div>
@@ -418,15 +443,20 @@
     <div class="container">
       <h2 class="title">XJTU-SPS for F or R</h2>
           <p>
-            XJTU-SPS for Forecasting or Reconstruction (XJTU-SPS for F or R)子数据集不包含任何异常或者故障，该数据集用于时间序列预测或重建任务，通常涉及航天器的正常状态预测、能量管理、任务规划等问题。同时对航天器运行状态的预测和重建也是后续异常检测、故障诊断等任务的基础。
+            XJTU-SPS for F or R does not contain any anomalies or faults. 
+            This dataset is used for time series forecasting or reconstruction tasks, typically involving spacecraft normal state prediction, energy management, mission planning, etc. 
+            The prediction and reconstruction of spacecraft operational states also form the basis for subsequent anomaly detection and fault diagnosis tasks.
+            <!-- XJTU-SPS for Forecasting or Reconstruction (XJTU-SPS for F or R)子数据集不包含任何异常或者故障，该数据集用于时间序列预测或重建任务，通常涉及航天器的正常状态预测、能量管理、任务规划等问题。同时对航天器运行状态的预测和重建也是后续异常检测、故障诊断等任务的基础。 -->
           </p>
           <p>
-            XJTU-SPS for F or R由6个子集组成，分别是：XJTU-SPS for F or R_4cycles、XJTU-SPS for F or R_18cycles、XJTU-SPS for F or R_24cycles、XJTU-SPS for F or R_34cycles、XJTU-SPS for F or R_90cycles、XJTU-SPS for F or R_94cycles，分别是模拟航天器绕地4、18、24、34、90、94个周期的实验数据。
-            作为时间序列的最经典任务，预测和重建方法的开发与数据集的模式和特征有很大关系，因此我们提供了多个周期的数据集，使用者根据工程和项目实际进行合适的周期选择、采样、数据量截取等。
+            XJTU-SPS for F or R consists of 6 subsets, namely: XJTU-SPS for F or R_4cycles, XJTU-SPS for F or R_18cycles, XJTU-SPS for F or R_24cycles, XJTU-SPS for F or R_34cycles, XJTU-SPS for F or R_90cycles, and XJTU-SPS for F or R_94cycles, which simulate 4, 18, 24, 34, 90, and 94 orbital cycles of spacecraft respectively.
+            Users can select, sample, and truncate the data according to their engineering and project needs.
+            <!-- XJTU-SPS for F or R由6个子集组成，分别是：XJTU-SPS for F or R_4cycles、XJTU-SPS for F or R_18cycles、XJTU-SPS for F or R_24cycles、XJTU-SPS for F or R_34cycles、XJTU-SPS for F or R_90cycles、XJTU-SPS for F or R_94cycles，分别是模拟航天器绕地4、18、24、34、90、94个周期的实验数据。 -->
+            <!-- 作为时间序列的最经典任务，预测和重建方法的开发与数据集的模式和特征有很大关系，因此我们提供了多个周期的数据集，使用者根据工程和项目实际进行合适的周期选择、采样、数据量截取等。 -->
           </p>
           <br>
           <p>
-            Visualization example of XJTU-SPS for F or R_18cycles:
+            <b>Visualization example of XJTU-SPS for F or R_18cycles:</b>
           </p>
 
       <iframe  src="static/pdfs/XJTU-SPS for F or R_18cycles.pdf" width="100%" height="550">
@@ -445,13 +475,17 @@
     <div class="container">
       <h2 class="title">XJTU-SPS for MR</h2>
       <p>
-        XJTU-SPS for work Mode Recognition (XJTU-SPS for MR)子数据集不包含任何异常或者故障，该数据集用于复杂工业系统模式识别，通常涉及航天器的工作模式识别、任务规划等问题。同时也是后续异常检测、故障诊断等任务的基础。现代复杂工业系统通常工作模式极其复杂，直接对其观测信号进行运维常常难以得到令人满意的、鲁棒的结果，因此工作模式识别常常作为复杂工业系统的第一步任务出现。
+        XJTU-SPS for work Mode Recognition (XJTU-SPS for MR) do not contain any anomalies or faults.
+        This dataset is used for mode recognition, typically involving recognition of spacecraft work condition, task planning, etc.
+        For complex industrial systems with multi-operational condition switching, performing work condition recognition as the initial stage could effectively reduce the false alarm rates in subsequent anomaly detection and the misdiagnosis rates in fault diagnosis.
+        <!-- XJTU-SPS for work Mode Recognition (XJTU-SPS for MR)子数据集不包含任何异常或者故障，该数据集用于复杂工业系统模式识别，通常涉及航天器的工作模式识别、任务规划等问题。同时也是后续异常检测、故障诊断等任务的基础。现代复杂工业系统通常工作模式极其复杂，直接对其观测信号进行运维常常难以得到令人满意的、鲁棒的结果，因此工作模式识别常常作为复杂工业系统的第一步任务出现。 -->
       </p>
       <p>
-        XJTU-SPS for MR由6个子集组成，分别是：XJTU-SPS for MR_4cycles、XJTU-SPS for MR_18cycles、XJTU-SPS for MR_24cycles、XJTU-SPS for MR_34cycles、XJTU-SPS for MR_90cycles、XJTU-SPS for MR_94cycles，分别是模拟航天器绕地4、18、24、34、90、94个周期的实验数据。每个子集都有对应的Mode Label文件作为标签。
+        XJTU-SPS for MR consists of XJTU-SPS for MR_4cycles, XJTU-SPS for MR_18cycles, XJTU-SPS for MR_24cycles, XJTU-SPS for MR_34cycles, XJTU-SPS for MR_90cycles, and XJTU-SPS for MR_94cycles, which simulate 4, 18, 24, 34, 90, and 94 orbital cycles of spacecraft respectively.
+        <!-- XJTU-SPS for MR由6个子集组成，分别是：XJTU-SPS for MR_4cycles、XJTU-SPS for MR_18cycles、XJTU-SPS for MR_24cycles、XJTU-SPS for MR_34cycles、XJTU-SPS for MR_90cycles、XJTU-SPS for MR_94cycles，分别是模拟航天器绕地4、18、24、34、90、94个周期的实验数据。每个子集都有对应的Mode Label文件作为标签。 -->
       </p>
       <p>
-        Visualization example of XJTU-SPS for MR_4cycles:
+        <b>Visualization example of XJTU-SPS for MR_4cycles:</b>
       </p>
 
       <iframe  src="static/pdfs/XJTU-SPS for MR_4cycles.pdf" width="100%" height="550">
@@ -470,14 +504,16 @@
     <div class="container">
       <h2 class="title">XJTU-SPS for AD</h2>
       <p>
-        XJTU-SPS for Anomaly Detection (XJTU-SPS for AD)子数据集涉及航天器的异常检测问题，该数据集异常模式多样，涵盖了航天器电源系统的各种异常情况，能够有效评估异常检测方法的有效性。
+        XJTU-SPS for Anomaly Detection (XJTU-SPS for AD) is a dataset for spacecraft anomaly detection, which covers a wide range of anomaly situations in spacecraft power systems, effectively evaluating the effectiveness of anomaly detection methods.
+        <!-- XJTU-SPS for Anomaly Detection (XJTU-SPS for AD)子数据集涉及航天器的异常检测问题，该数据集异常模式多样，涵盖了航天器电源系统的各种异常情况，能够有效评估异常检测方法的有效性。-->
       </p>
       <p>
-        XJTU-SPS for F or R由以下文件组成：XJTU-SPS for AD_Train、XJTU-SPS for AD_Test、XJTU-SPS for AD_Test_AnomalyLabel，分别是训练集、测试集、测试集异常标签。训练集不包含异常，测试集包含各种异常，异常标签文件是测试集的异常标签。
+        XJTU-SPS for AD consists of XJTU-SPS for AD_Train, XJTU-SPS for AD_Test, and XJTU-SPS for AD_Test_AnomalyLabel, which are the training set, test set, and anomaly label file respectively.
+        <!-- XJTU-SPS for AD由以下文件组成：XJTU-SPS for AD_Train、XJTU-SPS for AD_Test、XJTU-SPS for AD_Test_AnomalyLabel，分别是训练集、测试集、测试集异常标签。训练集不包含异常，测试集包含各种异常，异常标签文件是测试集的异常标签。 -->
       </p>
       <br>
       <p>
-        Visualization example of XJTU-SPS for AD_Test:
+        <b>Visualization example of XJTU-SPS for AD_Test:</b>
       </p>
 
       <iframe  src="static/pdfs/XJTU-SPS for AD_Test.pdf" width="100%" height="550">
@@ -496,12 +532,32 @@
     <div class="container">
       <h2 class="title">XJTU-SPS for FD</h2>
       <p>
-        XJTU-SPS for Fault Diagnosis (XJTU-SPS for FD)子数据集涉及航天器的故障诊断问题，该数据集故障模式多样，涵盖了航天器电源系统的各种故障情况，能够有效评估故障诊断方法的有效性。
+        XJTU-SPS for Fault Diagnosis (XJTU-SPS for FD) is a dataset for spacecraft fault diagnosis, which covers a wide range of fault situations in spacecraft power systems, effectively evaluating the effectiveness of fault diagnosis methods.
+        <!-- XJTU-SPS for Fault Diagnosis (XJTU-SPS for FD)子数据集涉及航天器的故障诊断问题，该数据集故障模式多样，涵盖了航天器电源系统的各种故障情况，能够有效评估故障诊断方法的有效性。 -->
       </p>
       <p>
-        XJTU-SPS for F or R由1个正常数据子集和17种故障数据子集组成，每种故障都由训练文件和测试文件组成。充分涵盖了航天器电源系统的各种正常和故障情况，其标签信息为：
+        XJTU-SPS for FD consists of normal data files and 17 types of fault data files. Each type of fault is composed of a training file and a test file.
+        <!-- XJTU-SPS for FD由1个正常数据文件和17种故障数据的文件组成，每种故障都由训练文件和测试文件组成。其标签信息为： -->
       <p>
-        0: 正常: normal;     
+        0: normal;     
+        1: SA_partial component or branch open circuit;     
+        2: SA_partial component or branch short circuit;     
+        3: SA_component deterioration;     
+        4: BCR_open circuit;     
+        5: BCR_short circuit;     
+        6: BCR_increased power loss;     
+        7: BAT_degradation;     
+        8: BAT_open circuit;     
+        9: Bus_open circuit;     
+        10: Bus_short circuit;     
+        11: Bus_insulation breakdown;     
+        12: PDM1_open circuit or short circuit;     
+        13: PDM2_open circuit or short circuit;     
+        14: PDM3_open circuit or short circuit;     
+        15: Load1_open circuit;     
+        16: Load2_open circuit;     
+        17: Load3_open circuit;     
+        <!-- 0: 正常: normal;     
         1: SA部分部件或支路断路: SA_partial component or branch open circuit;     
         2: SA部分部件或支路短路: SA_partial component or branch short circuit;     
         3: SA部件老化: SA_component deterioration;     
@@ -518,14 +574,17 @@
         14: PDM3断路或短路: PDM3_open circuit or short circuit;     
         15: Load1断路: Load1_open circuit;     
         16: Load2断路: Load2_open circuit;     
-        17: Load3断路: Load3_open circuit;     
+        17: Load3断路: Load3_open circuit;      -->
       </p>
       <p>
-        注：我们的故障类型不包括BAT短路、Load短路类型的原因说明如下：我们除了板载电池，还外接了一组电池，希望通过这种方法模拟BAT短路的情况，但是实验证明，这种做法是危险的，有较大安全隐患。而且观察显示，这种突发短路故障，会立刻触发电源系统的短路保护，其实验现象会与断路实验相似。因此我们认为即使无法进行这几项实验，该数据集也能够充分评估故障诊断方法的有效性。
+        Supplementary Note: The exclusion of BAT short-circuit and Load short-circuit fault types stems from experimental safety constraints. 
+        While attempting to simulate BAT short-circuits using an external battery pack alongside onboard batteries, we observed significant safety hazards. Furthermore, observations showed that a sudden short circuit immediately triggers the power system's protection mechanisms, producing experimental signatures indistinguishable from those of an open-circuit fault.
+        Therefore, the simulations of these short-circuit faults can be considered as subsumed under the open-circuit fault category.
+        <!-- 注：我们的故障类型不包括BAT短路、Load短路类型的原因说明如下：我们除了板载电池，还外接了一组电池，希望通过这种方法模拟BAT短路的情况，但是实验证明，这种做法是危险的，有较大安全隐患。而且观察显示，这种突发短路故障，会立刻触发电源系统的短路保护，其实验现象会与断路实验相似。因此我们认为即使无法进行这几项实验，该数据集也能够充分评估故障诊断方法的有效性。 -->
       </p>
       <br>
       <p>
-        Visualization example of SA_partial component or branch short circuit:
+        <b>Visualization example of SA_partial component or branch short circuit:</b>
       </p>
 
       <iframe  src="static/pdfs/SA_partial component or branch short circuit.pdf" width="100%" height="550">
@@ -546,13 +605,17 @@
       <!-- Paper video. -->
       <h2 class="title is-3">Physical Simulation Model</h2>
           <p>
-            XJTU-SPS配套有对应的数理模型，能够提供和实验完全对应的物理仿真，是监测运维、确定正常工作状态、预测未来工作状态等任务的基础，同时也可被用于数字孪生、PINN（物理信息神经网络）等研究。
+            XJTU-SPS is accompanied by a corresponding mathematical-physical model that enables simulations fully consistent with the dataset. 
+            It supports monitoring and maintenance applications and provides comprehensive physical knowledge for research on digital twins, PINNs, and related topics.
+            <!-- XJTU-SPS配套有对应的数理模型，能够提供和数据集完全对应的物理仿真，可用作监测运维，同时也能为数字孪生、PINN（物理信息神经网络）等研究提供完备的物理知识。 -->
           </p>
           </p>
           <br>
           <p>
-            Visualization example of simulation results for several representative channels are presented. For the comprehensive simulation results of all channels, please refer to 
-            <a href="https://github.com/DiYi1999/SPS-Model-and-PIGNNP" target="_blank" style="color: red;">this study</a>.
+            <b>
+              Visualization example of simulation results for several representative channels are presented. For the comprehensive simulation results of all channels, please refer to 
+              <a href="https://github.com/DiYi1999/PhyGNN" target="_blank" style="color: red;">this study</a>.
+            </b>
           </p>
         </div>
         <!-- <div class="columns is-centered has-text-centered"> -->
@@ -583,10 +646,13 @@
       <h2 class="title">BibTeX</h2>
       <p>
         If this dataset or model is useful for your research, please consider 
-        <a href="https://github.com/<GITHUB USERNAME>/<REPOSITORY NAME>" target="_blank">starring our repository</a> 
+        <a href="https://github.com/DiYi1999/XJTU-SPS" target="_blank">starring our repository</a> 
         and cite paper:
       </p>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>
+        BibTex Code Here
+        The data and model will be made available upon acceptance of the paper. We sincerely appreciate your interest and patience!
+      </code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
@@ -598,7 +664,13 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            XJTU-SPS的数据采集及仿真模型构建工作是在2023年4月至2025年3月期间于西安交通大学机械工程学院完成的，如果您对该数据集或仿真模型有任何问题或想法需要讨论，非常欢迎致信Yi Di(dy1999@stu.xjtu.edu.cn)。若该学生因毕业等原因无法收到该邮箱邮件，可以联系其指导老师：算法相关问题请联系Zhibin Zhao(zhaozhibin@xjtu.edu.cn)，实验相关问题请联系Zhi Zhai(zhaizhi@xjtu.edu.cn)。该工作的项目管理者及资金支持者是Xuefeng Chen(chenxf@xjtu.edu.cn)。此外，还需致谢西安交通大学的Fujin Wang及哈尔滨工业大学的Rixin Wang和Minqiang Xu，他们的帮助或发表的论文对本项目的顺利完成起到了重要作用。
+            The XJTU-SPS testbed assembly, data acquisition, and simulation model development were conducted at the School of Mechanical Engineering, Xi'an Jiaotong University, from April 2023 to September 2025.
+            If you have any questions or would like to discuss ideas concerning this dataset or its simulation model, please feel free to contact Yi Di at dy1999@stu.xjtu.edu.cn.
+            <!-- For inquiries regarding this dataset or simulation model, please contact Yi Di (dy1999@stu.xjtu.edu.cn).  -->
+            Should email delivery fail due to graduation-related account deactivation, you may instead reach out to his supervising professors: Prof. Zhibin Zhao (zhaozhibin@xjtu.edu.cn) and Prof. Zhi Zhai (zhaizhi@xjtu.edu.cn).
+            Additionally, Xuefeng Chen is the project and funding supporter, correspondence regarding project collaboration opportunities may be directed to chenxf@xjtu.edu.cn.
+            <!-- XJTU-SPS的试验台搭建、数据采集及仿真模型构建工作是在2023年4月至2025年3月期间于西安交通大学机械工程学院完成的，如果您对该数据集或仿真模型有任何问题或想法需要讨论，非常欢迎致信Yi Di(dy1999@stu.xjtu.edu.cn)。若该学生因毕业原因无法收到该邮箱邮件，可以联系其指导老师：Zhibin Zhao(zhaozhibin@xjtu.edu.cn)和Zhi Zhai(zhaizhi@xjtu.edu.cn)。此外，项目及资金支持者为Xuefeng Chen，寻求项目合作请致信chenxf@xjtu.edu.cn。 -->
+            <!-- 此外，还需致谢西安交通大学的Fujin Wang及哈尔滨工业大学的Rixin Wang和Minqiang Xu，他们的帮助或发表的论文对本项目的顺利完成起到了重要作用。 -->
             <!-- 王日新和徐敏强 -->
           </p>
           <p>
